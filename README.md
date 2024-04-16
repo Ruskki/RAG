@@ -1,6 +1,6 @@
 # Ruski's Arch Guide
 ## About
-I am stupid, and usually forget important steps when installing and post-intall that I must do. So I made this trusty guide as to not forget. If you're not me, and by any chance you happen to stumble on this guide, hey there! This guide is mostly tailored to new users, those who like me on their first install were told to read the wiki and had absolutely no idea what they were doing and why, or those who have experience with arch and want a friendly reminder on what to do on your install.
+I am stupid, and usually forget important steps when setting up arch. While initially I made this guide for myself, I thought that sharing it would be much better. This guide is mostly tailored to new users, those who like me on their first install were told to read the wiki and had absolutely no idea what they were doing and why, or those who have experience with arch and want a friendly reminder on what to do on your install. Here, I'll be talking about common pitfalls, general recomendations and what to do when you're stuck.
 
 ## Considerations
 + This install is mostly tailored toward my needs, you might find it useful or you mind find it lacking in other aspects. While I do try to explain lots of things for first time installers, I won't go knees deep into how everything works.
@@ -9,9 +9,10 @@ I am stupid, and usually forget important steps when installing and post-intall 
 
 + While it is meant as a more readable version of the arch wiki, it is NOT supposed to replace it. If in any point you're stuck or don't understand, I suggest you head on over and have a quick read :)
 
-+ I am by no means an arch expert, so please take my opinion with a grain of salt. If you happen to spot a mistake, missed step, incorrect command or find a better way to do some of these steps, you can send me a message over on discord! Similarly if you want help, you can also message me
++ I am by no means an arch expert, so please take my opinion with a grain of salt. If you happen to spot a mistake, missed step, incorrect command or find a better way to do some of these steps, you can add an issue or send me a message! Similarly if you want help, you can also message me @ruskki_
 
-@ruskki_
++ At the moment, this is currently a WIP. Please be patient, I am aware there might be some sections that are hard to read or understand. I'm trying my best to make it easier to understand and more organized. So if you happen to stumble by, hello!
+
 
 ## Install
 
