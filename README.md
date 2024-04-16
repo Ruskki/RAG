@@ -58,33 +58,41 @@ After we choose what disk we want to use, we'll use its directory to access it w
 fdisk /dev/sda
 ```
 
-Now we partition the disk. Here by pressing certain letters we can create,  modify or delete partitions. If your disk is already partitioned and you would like to wipe its partition table, you can use "d" to delete every partition.
+Now we partition the disk. If your disk is already partitioned and you would like to wipe its partition table, you can use "g" to wipe the existing partition table.
 
-This is the convention **I** like to use for my system and this is the order in which I create them.
+If you're new, here I go a bit in depth on what the minimums are for every partition.
+[Choosing partition sizes](https://github.com/Ruskki/RAG/wiki/Choosing-partition-sizes)
+
+This is the convention **I** like to use for my system and this is the order in which I create them. I personally like to have home separate, in case I need to reinstall arch and it keeps my personal files away from system files. You don't need to do this.
+
 | Type  | Size   |
 |:-----:|:------:|
 | boot  | 512MB  |
 | swap  | 4GB    |
 | root  | 80GB+  |
-| home  |  80GB+ |
+| home  | 80GB+  |
 
-For every partition other than boot, you can allocate more. I have heard of people adding the same amount of GB to swap as their RAM, or double. I personally like to use less than what I have.
 
-For root, I think it really depends a lot on each person. A If the answers are yes and no, you can do what I do.
+#### Fdisk commands
+```
+n        create new partitions
+t        change partition type
+d        delete existing partition
+w        write changes to partition table
+```
 
-I personally like to have home separate, in case I need to reinstall arch and it keeps my personal files away from system files
+#### Partition Types
+Keep in mind that after creating your partitions, you have to change which types they are
 
-You can use "n" to create new partitions
+| Partition  | Type   |
+|:-----:|:------:|
+| boot  | efi    |
+| swap  | swap   |
+| root  | ext4   |
+| home  | ext4   |
 
-Keep in mind that after creating your partitions with fdisk you have to change which types they are
-boot = efi
-swap = swap
-root & home = ext4
 
-Use "t" to change a partition's type
-When you're done, type "w" to write the changes
-
-NOTE: keep in mind the directory of the partition, if in any case you forget, do "fdisk -l" to see all of the partitions
+NOTE: keep in mind the directory each partition, we will need them for next step. If in any case you forget, do "fdisk -l" to see all of the partitions
 
 ### Formating
 
@@ -119,7 +127,7 @@ swapon /dev/SWAP_PARTITION
 
 ### Installing Linux
 
-There's not much to say, just copy and paste
+There's not much to say, this will install the linux kernel and firmware onto your root folder. Just copy and paste!
 
 ```
 pacstrap -K /mnt base linux linux-firmware
@@ -127,7 +135,7 @@ pacstrap -K /mnt base linux linux-firmware
 
 ### Generating your fstab
 
-This generates your fstab file, which basically tells your system how to mount partitions on boot.
+This generates your fstab file, which is in charge of telling your system how to mount partitions on startup.
 
 ```
 genfstab -U /mnt >> /mnt/etc/fstab
@@ -135,8 +143,8 @@ genfstab -U /mnt >> /mnt/etc/fstab
 
 ## Changing root
 
-If you've gotten this far without any hiccups, we're 1/3 there. Let's keep going
-
+If you've gotten this far without any hiccups, we're 1/3 there. Let's keep going.
+Let's change into our root partition.
 
 ```
 arch-chroot /mnt
@@ -156,6 +164,8 @@ Now here's the fun part, installing a bunch of stuff. Here are MUSTS
 + sudo
 + bootloader
 + display server
+
+Don't know what to install?
 
 For this next package you can take two routes, Desktop enviroment or Window manager. Each have their pros and cons, but if you want something more simple, go with the desktop manager.
 
