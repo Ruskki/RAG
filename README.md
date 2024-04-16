@@ -16,7 +16,8 @@ I am stupid, and usually forget important steps when setting up arch. While init
 
 ## Install
 
-Before you install arch, you must have a USB with Arch. Here I teach you how -> [Arch USB](https://github.com/Ruskki/RAG/wiki/Flashing-the-ISO)
+Before you install arch, you must have a USB with Arch. 
+[Setting up the Arch USB](https://github.com/Ruskki/RAG/wiki/Flashing-the-ISO)
 
 There are two main ways to install arch, via the script or the manual way. If you want to use the script, just type "archinstall" and you'll have some handholding. You can still follow this guide if you use the script, but many of the steps will be done by the script. If you want to do the manual way, keep reading
 
@@ -60,14 +61,16 @@ fdisk /dev/sda
 Now we partition the disk. Here by pressing certain letters we can create,  modify or delete partitions. If your disk is already partitioned and you would like to wipe its partition table, you can use "d" to delete every partition.
 
 This is the convention **I** like to use for my system and this is the order in which I create them.
-boot - 512MB
-swap - min 4GB
-root - min 80GB
-home - min 80GB
+| Type  | Size   |
+|:-----:|:------:|
+| boot  | 512MB  |
+| swap  | 4GB    |
+| root  | 80GB+  |
+| home  |  80GB+ |
 
 For every partition other than boot, you can allocate more. I have heard of people adding the same amount of GB to swap as their RAM, or double. I personally like to use less than what I have.
 
-For root, I think it really depends a lot on each person. Are you going to install many packages (apps)? Will you be doing checkups and checking on which packages you no longer use? If the answers are yes and no, you can do what I do.
+For root, I think it really depends a lot on each person. A If the answers are yes and no, you can do what I do.
 
 I personally like to have home separate, in case I need to reinstall arch and it keeps my personal files away from system files
 
