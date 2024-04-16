@@ -16,7 +16,7 @@ I am stupid, and usually forget important steps when setting up arch. While init
 
 ## Install
 
-Before you install arch, you must download the ISO, flash it to a usb and boot into it. Here, I assume you already know how to do this.
+Before you install arch, you must have a USB with Arch. Here I teach you how -> [Arch USB](https://github.com/Ruskki/RAG/wiki/Flashing-the-ISO)
 
 There are two main ways to install arch, via the script or the manual way. If you want to use the script, just type "archinstall" and you'll have some handholding. You can still follow this guide if you use the script, but many of the steps will be done by the script. If you want to do the manual way, keep reading
 
