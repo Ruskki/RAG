@@ -1,4 +1,5 @@
 # Ruski's Arch Guide
+
 ## About
 I am stupid, and usually forget important steps when setting up arch. While initially I made this guide for myself, I thought that sharing it would be much better. This guide is mostly tailored to new users, those who like me on their first install were told to read the wiki and had absolutely no idea what they were doing and why, or those who have experience with arch and want a friendly reminder on what to do on your install. Here, I'll be talking about common pitfalls, general recomendations and what to do when you're stuck.
 
@@ -43,6 +44,16 @@ station wlan0 get-networks
 station wlan0 connect "NETWORK NAME"
 exit
 ```
+
+## [OPTIONAL] Open this guide in the terminal
+
+Just run this command, it will open a split window where you can read the guide right inside the terminal, making it easier to follow
+
+```
+pacman -Sy curl; bash <(curl https://raw.githubusercontent.com/Ruskki/RAG/main/openguide.sh)
+```
+
+To traverse the guide you can use K or UP to go up and K or DOWN to go down, and to change focus between the guide and the terminal use Ctrl + B then left or right to change focus
 
 ### Create the partitions
 
